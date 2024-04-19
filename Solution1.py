@@ -8,10 +8,8 @@ class Solution(object):
         complementDict = {}
         for index, num in enumerate(nums):
             complement = target - num #complement is the value needed to reach the sum
-
             if complement in complementDict:
                 return [complementDict[complement], index]
-            
             complementDict[num] = index
         
         return []
